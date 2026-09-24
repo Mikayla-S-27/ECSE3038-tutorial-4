@@ -39,6 +39,7 @@ def create_device(device: Device):
     readings.append(new_device)
     return new_device
 
+
 @app.put("/devices/{name}")
 def update_device(name: str, updated_device: Device):
     for index, reading in enumerate(readings):
