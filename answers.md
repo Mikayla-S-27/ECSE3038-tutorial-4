@@ -13,6 +13,6 @@
 7. DELETE request again: Status Code - 404 | Devices - 6 
 
 
-The PUT and GET method left the system in the same state whether it was sent once or twice.
-DELETE and POST will change the state of the system depending on how many times the specific request is sent.
-PUT and GET are idempotent requests.
+The PUT, GET and DELETE method left the system in the same state whether it was sent twice.
+POST will change the state of the system depending on how many times the specific request or the state of the handler.  In this tutorial POST is also idempotent because you cannot POST duplicate device.
+PUT, GET and DELETE are idempotent requests.  POST in this case is also idempotent but is not always.
